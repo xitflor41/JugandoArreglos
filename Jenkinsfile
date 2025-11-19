@@ -7,7 +7,7 @@ pipeline {
     githubPush()
   }
   environment{
-    POM="JugadoArreglo/pom.xml"
+    POM="JugadoArreglos/pom.xml"
   }
   stages{
     stage('Descarga') {
