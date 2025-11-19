@@ -1,12 +1,12 @@
 pipeline {
   agent any
   tools {
-    maven 'maven_devops'
+    maven 'devops_maven'
   }
   triggers{
     githubPush()
   }
-  enviroment{
+  environment{
     POM="JugadoArreglo/pom.xml"
   }
   stages{
