@@ -17,7 +17,7 @@ pipeline {
     }
     stage('Compilacion'){
       steps{
-        sh 'mvn -f $POM -B'
+        sh 'mvn -f $POM -B package'
       }
     }
     stage('Prueba'){
@@ -32,7 +32,6 @@ pipeline {
     }
     stage('Empaquetado'){
       steps{
-        sh 'mvn -f $POM package'
         archiveArtifacts artifacts: 'JugandoArreglos/target/*.jar', fingerprint:true
       }
     }
